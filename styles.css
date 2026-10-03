@@ -1,0 +1,254 @@
+/* COLORES DE ECOLAB */
+:root {
+    --verde: #2a9d8f;
+    --azul-oscuro: #264653;
+    --fondo-claro: #f0f8f5;
+    --blanco: #ffffff;
+}
+
+/* GENERAL */
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    background-color: var(--fondo-claro);
+    color: #333;
+}
+
+/* HEADER PRO */
+header {
+    background: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between; /* esto alinea todo */
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky; /* para que se quede arriba al bajar */
+    top: 0;
+    z-index: 100;
+}
+
+header img {
+    height: 50px;
+}
+
+header nav {
+    display: flex;
+    gap: 30px;
+}
+header nav a {
+    text-decoration: none;
+    color: var(--azul);
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s;
+}
+header nav a:hover {
+    color: var(--verde);
+}
+
+.buscador {
+    display: flex;
+}
+.buscador input {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+}
+.buscador button {
+    background: var(--verde);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+
+/* BANNER HERO CON TU FOTO */
+.hero {
+    background: linear-gradient(rgba(38, 70, 83, 0.8), rgba(38, 70, 83, 0.8)), 
+                url('IMG/banner-ecolab.jpg') center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px; /* le subí un poquito el alto */
+}
+
+.hero h1 {
+    font-size: 44px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* sombra para que resalte */
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto 30px auto;
+}
+
+/* BOTON */
+.btn {
+    background-color: var(--verde);
+    color: white;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    display: inline-block;
+    transition: 0.3s;
+    border: 2px solid var(--verde);
+}
+.btn:hover {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    transform: translateY(-3px);
+}
+/* BOTONES DEL HERO */
+.hero-botones {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.hero-botones a {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(5px); /* efecto vidrio */
+    color: white;
+    padding: 12px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.3);
+    transition: 0.3s;
+}
+.hero-botones a:hover {
+    background: var(--verde);
+    border-color: var(--verde);
+    transform: translateY(-2px);
+}
+/* SECCION SERVICIOS */
+.servicios {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+}
+
+.caja {
+    background: var(--blanco);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    width: 300px;
+    text-align: center;
+    border-top: 4px solid var(--verde);
+    transition: transform 0.3s;
+}
+
+.caja:hover {
+    transform: translateY(-5px);
+}
+
+.caja h3 {
+    color: var(--azul-oscuro);
+    margin-bottom: 10px;
+}
+/* SECCIÓN POR QUÉ ECOLAB */
+.por-que {
+    background-color: #F0F4F8; /* gris azulado clarito */
+    padding: 60px 20px;
+    text-align: center;
+}
+.por-que h2 {
+    color: var(--azul);
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+.por-que-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.por-que .item {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.por-que .icono {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+.por-que .item h3 {
+    color: var(--azul);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.por-que .item p {
+    color: #555;
+    font-size: 15px;
+}
+/* SECCIÓN CONTACTO */
+.contacto {
+    padding: 60px 20px;
+    text-align: center;
+    background: var(--azul);
+    color: white;
+}
+.contacto h2 { font-size: 32px; margin-bottom: 10px;color: #264653; }
+.contacto p { margin-bottom: 30px; color:#264653 }
+.contacto form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 15px;
+}
+.contacto input, .contacto select, .contacto textarea {
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+.contacto .btn {
+    background: var(--verde);
+    margin-top: 10px;
+}
+/* BOTÓN WHATSAPP FLOTANTE */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #1ebe5b;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
